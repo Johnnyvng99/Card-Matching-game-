@@ -1,0 +1,35 @@
+I wanted to planned most of the logic of the mechanism of the game through list manipulation due to how easily it 
+could be manipulate by me. For draw_box and quit_button, these were fairly straight forward. I took some liberty of
+my own to pick my own color theme. Watching the demo video, the requirement were that the popup for name would pop up first
+followed by what kind of card game mode the user want. The design between these two were fairly similar with some more
+defensive coding for the card game mode. I wanted to keep asking until the player put in the right input which were 3 options
+so a while loop seem appropiate. Only when building the leaderboard I would figure this out but I had to get the name
+pop up to return the user name into a global variable so I can acess it later for the leaderboard. 
+
+What I did next was create the turtle to represent the cards and set all their front face card shape and coordinate. 
+This is when I saw some challenges, with the onclick function since it only take one arguement. I saw how complicated
+this was going to be. Seeing this I had to create another function to run when the player click on the card. At first it was 
+trying to figure out how to change the shape of the card to another shape. Once I figure that out, I saw that I somehow need to randomize 
+card selection. To me I needed randomize the selection of the type of card, next I need to randomize the position of the card. 
+Seeing how I design the card into specific position already, I added more input to the function that would decide what the card 
+turn into once the user clicked on it. By creating a bunch of random number into a list within the index of the game mode, I could 
+assign specific index of this list onto the list that contain card value. 
+
+Designing the method in which the game "remember" the value of the card involved more list, I know I had to find a way to compare values. 
+This gave me flashbacks to the pokemon hw where I essentially build by using a ton of if statements, which was how I build it here. I also knew
+that we had to keep track of points, turns, guess. Admittedly I forgot about the guess until rewatching the video later on, so I build a way to 
+calculate points and guesses first just by adding digits to a list and getting the len of that list. So later when I saw the requirement of guess
+I builded a function to use what I already have which was the turn counter. 
+
+Within the turn card function, I would later build my leaderboard within it too which was very not ideal for me. Hindsight I would have not put that 
+much into this function or found a different way on how to track when the player when and build a if statement of that. So this was the hardest part of 
+project for me was building/sorting the leaderboard. As I was designing here, I came up with a game plan. Load some txt file if exist into a list, 
+then base of that list create a viewable leaderboard by using a forloop. When player win, there result would be added to the list and using the sort() ability
+since the score value was identify as int type it could be sorted to how I wanted. The tricky part for me was figuring how to rewrite the list into the txt file. 
+
+In term of behind the scene, I felt like a lot of my work is very ineffecient and unorganized. Luckily we are not graded on that so I didn't had to be as careful in planning. 
+I had a rough idea of planning on focusing on building small elements block by block and trying to focus them into individual functions. But once they start to communnicate to each other
+that was where I felt like things got sloppy. 
+
+Thank you for reading this 
+Huy(Johnny) Vuong
